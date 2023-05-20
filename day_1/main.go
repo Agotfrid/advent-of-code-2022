@@ -27,9 +27,8 @@ func main() {
 	maxSum := 0
 	maxUnit := 0
 	units, err := readFile(filename)
-	// fmt.Println(units)
 	if err != nil {
-		fmt.Println("Error reding file:", err)
+		panic("error reading file")
 	}
 
 	for i, unit := range units {
