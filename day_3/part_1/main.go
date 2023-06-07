@@ -51,7 +51,6 @@ func findCommonItemPriority(comp1, comp2 string) int {
 			}
 		}
 	}
-
 	return 0
 }
 
