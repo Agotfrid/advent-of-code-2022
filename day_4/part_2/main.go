@@ -21,7 +21,6 @@ func processFile(filename string) ([]Pairs, error) {
 		return nil, fmt.Errorf("Error reading file: %w", err)
 	}
 
-	// first seperate the string by newline representing each Pair
 	lines := strings.Split(strings.TrimSpace(string(file)), "\n")
 	var pairs []Pairs
 	for _, line := range lines {
@@ -50,7 +49,6 @@ func processFile(filename string) ([]Pairs, error) {
 			Elf2: ranges[1],
 		}
 
-		// save the containing values to struct
 		pairs = append(pairs, pair)
 	}
 	return pairs, nil
@@ -64,7 +62,6 @@ func checkPairs(s1 []int, s2 []int) bool {
 		m[e1] = true
 	}
 
-	// checks if all values from s2 are contained in s1, it assumes that s2 will always be smaller than s1 to return true
 	for _, e2 := range s2 {
 		_, present := m[e2]
 		if present {
@@ -97,6 +94,5 @@ func main() {
 			count++
 		}
 	}
-
 	fmt.Println(count)
 }
