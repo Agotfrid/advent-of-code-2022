@@ -41,9 +41,6 @@ func moveCrates(stacks [][]string, directions []Directions) string {
 		movingCrates := make([]string, n)
 		copy(movingCrates, stacks[source][len(stacks[source])-n:])
 
-		for i, j := 0, len(movingCrates)-1; i < j; i, j = i+1, j-1 {
-			movingCrates[i], movingCrates[j] = movingCrates[j], movingCrates[i]
-		}
 		stacks[dest] = append(stacks[dest], movingCrates...)
 
 		stacks[source] = stacks[source][:len(stacks[source])-n]
