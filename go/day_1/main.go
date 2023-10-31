@@ -32,18 +32,6 @@ func findTotalCalories(unit string) (int, error) {
 	return total, nil
 }
 
-// func findHighestSum(sums []int) (int, int) {
-// 	highestSum := 0
-// 	unit := 0
-// 	for i, sum := range sums {
-// 		if sum > highestSum {
-// 			highestSum = sum
-// 			unit += i
-// 		}
-// 	}
-// 	return unit, highestSum
-// }
-
 func main() {
 	if len(os.Args) < 2 {
 		fmt.Println("Please provide a filename as an argument.")
@@ -84,7 +72,4 @@ func main() {
 		total += number
 	}
 	fmt.Printf("Top %d Elves are carrying %d calories\n", topElves, total)
-
-	// unit, highestSum := findHighestSum(sums)
-	// fmt.Printf("Elf #%d is carrying a total of %d calories\n", unit, highestSum)
 }
